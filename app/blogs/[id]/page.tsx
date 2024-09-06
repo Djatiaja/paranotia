@@ -1,0 +1,39 @@
+import Nav from "@/app/component/navbar/Nav";
+import blog from "../../blogs.json";
+import Footer from "@/app/component/footer/Footer";
+
+interface blogPost {
+    id: number;
+    title: string;
+    content: string[];
+}
+
+export default function Page(params: {params: {id: string}}) {
+    const id = params.params.id;
+    const blogPost = blog.blogs.find((blog) => blog.id.toString() === id);
+    return (
+      <div className="px-52 pt-12 flex w-full flex-col text-3xl">
+        <Nav />
+        <h1 className="self-center underline font-bold mt-4">
+          {blogPost?.title}
+        </h1>
+        <p className="self-center mt-2 mb-9">{blogPost?.date}</p>
+        <div className="flex w-full justify-center mb-9">
+          <img
+            src="https://placehold.co/1500x300"
+            alt="placeholder"
+            width={"100%"}
+            height={300}
+          />
+        </div>
+        {blogPost?.content.map((content: string) => (
+          <div>
+            <p className="">{content}</p>
+            <br />
+          </div>
+        ))}
+
+        <Footer />
+      </div>
+    );
+    }

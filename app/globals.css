@@ -3,4 +3,5 @@
 @tailwind utilities;
           
 :root{
+    font-family: "IBM Plex Mono", monospace;
 }
