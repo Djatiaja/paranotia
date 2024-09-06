@@ -1,12 +1,9 @@
 import Nav from "@/app/component/navbar/Nav";
 import blog from "../../blogs.json";
 import Footer from "@/app/component/footer/Footer";
+import Image from "next/image";
 
-interface blogPost {
-    id: number;
-    title: string;
-    content: string[];
-}
+
 
 export default function Page(params: {params: {id: string}}) {
     const id = params.params.id;
@@ -19,15 +16,16 @@ export default function Page(params: {params: {id: string}}) {
         </h1>
         <p className="self-center mt-2 mb-9">{blogPost?.date}</p>
         <div className="flex w-full justify-center mb-9">
-          <img
-            src="https://placehold.co/1500x300"
+          <Image
+            src="/assets/Cover_dekstop.png"
             alt="placeholder"
-            width={"100%"}
+            width={1500}
             height={300}
+            className="w-full"
           />
         </div>
-        {blogPost?.content.map((content: string) => (
-          <div>
+        {blogPost?.content.map((content: string, index) => (
+          <div key={index} >
             <p className="">{content}</p>
             <br />
           </div>

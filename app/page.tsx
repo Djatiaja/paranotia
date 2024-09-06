@@ -1,7 +1,7 @@
-import Link from "next/link";
 import Nav from "./component/navbar/Nav";
 import LinkProject from "./component/LinkProject/LinkProject";
 import Footer from "./component/footer/Footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,12 +9,15 @@ export default function Home() {
       <div className="px-52 pt-12 flex w-full flex-col ">
         <Nav />
         <div className="flex w-full justify-center">
-          <img
-            src="https://placehold.co/1500x300"
-            alt="placeholder"
-            width={"100%"}
-            height={300}
+          <Image
+          src="/assets/Cover_dekstop.png"
+          alt="placeholder"
+          width={1500}
+          height={300}
+          className="w-full"
           />
+
+          
         </div>
         <div className="pt-6 text-3xl/8">
           <h1 className="">

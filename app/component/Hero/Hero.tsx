@@ -10,7 +10,6 @@ interface Blog {
 
 export default function Hero() {
     const blogs  = blog.blogs;
-    const blogsLength = Object.keys(blogs).length;
     return (
       <div className="pt-12" >
         {blogs.map((blog: Blog) => (
