@@ -19,7 +19,7 @@ export default function Home() {
 
           
         </div>
-        <div className="pt-6 text-3xl/8">
+        <div className="pt-6 text-2xl/6">
           <h1 className="">
             <LinkProject text="easy" link="/" target="_blank" />
             &nbsp;(dia) <br />
